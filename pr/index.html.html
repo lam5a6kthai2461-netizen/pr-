@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LIU Yijing | AI Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>LIU Yijing</h1>
+
+    <div id="typed"></div>
+
+    <p class="sub">
+        AI × Visual Storytelling × Digital Media
+    </p>
+</section>
+
+<!-- FILTER -->
+<section class="filter">
+    <button onclick="filter('all')">All</button>
+    <button onclick="filter('ai')">AI</button>
+    <button onclick="filter('video')">Video</button>
+    <button onclick="filter('data')">Data</button>
+    <button onclick="filter('3d')">3D</button>
+</section>
+
+<!-- PROJECTS -->
+<section class="grid">
+
+    <div class="card ai" onclick="openModal(1)">
+        AI Content Production
+    </div>
+
+    <div class="card ai" onclick="openModal(2)">
+        Visual AI Design
+    </div>
+
+    <div class="card data" onclick="openModal(3)">
+        Data Storytelling
+    </div>
+
+    <div class="card 3d" onclick="openModal(4)">
+        Spatial Media
+    </div>
+
+</section>
+
+<!-- AI CHAT -->
+<section class="chatbox">
+    <h2>Ask My Portfolio</h2>
+    <input id="input" placeholder="Ask something..." />
+    <button onclick="ask()">Ask</button>
+    <div id="answer"></div>
+</section>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span onclick="closeModal()">×</span>
+        <div id="modal-text"></div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
